@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ShapeAppearanceOverlay.App.CutCornerMedium" parent="">
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="MyShapeAppearanceOverlay.Circle" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+</resources>

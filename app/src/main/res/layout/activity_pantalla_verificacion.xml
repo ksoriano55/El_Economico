@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Login.Pantalla_verificacion">
+
+    <!--textview -->
+
+    <TextView
+        android:id="@+id/tvverificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView5"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="Verificacion de Correo Electronico"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="401dp"
+        android:layout_height="271dp"
+        app:srcCompat="@drawable/logo_oficial" />
+
+    <TextView
+        android:id="@+id/txtTexto"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvverificacion"
+        android:text="Hemos enviado un codigo  a tu correo electrónico por favor ingrese el código "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <!--edittext 1  padre y despues el hijo-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtcodigoPadre"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTexto"
+        android:layout_marginStart="20dp"
+        app:boxStrokeColor="#F17A0A"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColorHint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtcodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Código de Verificación"
+            android:inputType="text"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="343dp"
+        android:layout_height="72dp"
+        android:layout_below="@+id/txtcodigoPadre"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txtMensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="No has recibido el Código "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnlogin"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="?android:attr/colorActivatedHighlight"
+            android:onClick="Reneviar"
+            android:text="Reenviar"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <!--layout para los dos botones -->
+    <LinearLayout
+        android:layout_width="378dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="19dp"
+        android:gravity="center">
+
+
+        <!--boton restablecer cuenta -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnverificarcodigo"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="?android:attr/colorActivatedHighlight"
+            android:text="VERIFICAR CODIGO"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</RelativeLayout>

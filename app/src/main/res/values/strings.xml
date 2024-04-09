@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Económico Shop App</string>
+    <string name="Correo">Ingrese su Correo Electronico</string>
+    <string name="Contraseña">Ingrese su Contraseña</string>
+    <string name="textViewProductName">Nombre Producto</string>
+    <string name="textViewPriceReal">Precio Real\n</string>
+    <string name="textViewPriceDiscount">Precio Con Descuento</string>
+    <string name="buttonAddToCart">Add to Cart</string>
+    <string name="nombre">Nombre</string>
+    <string name="btnatras"><![CDATA[<- Atras]]></string>
+    <string name="textViewIVS">IVS</string>
+</resources>
