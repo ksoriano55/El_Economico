@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="10dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/mylista"
@@ -11,7 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:backgroundTint="#E2E4E6"
-        android:elevation="5dp">
+        android:elevation="5dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,7 +59,7 @@
 
                 <TextView
                     android:id="@+id/text_fecha_pedido"
-                    android:layout_width="165dp"
+                    android:layout_width="115dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
@@ -68,7 +71,7 @@
 
                 <TextView
                     android:id="@+id/fecha_pedido"
-                    android:layout_width="165dp"
+                    android:layout_width="215dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="10dp"
@@ -87,7 +90,7 @@
 
                 <TextView
                     android:id="@+id/text_estatus_pedido"
-                    android:layout_width="165dp"
+                    android:layout_width="115dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
@@ -102,7 +105,7 @@
                     android:id="@+id/total_pagar"
                     android:layout_width="81dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="0dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="1dp"
                     android:layout_marginBottom="10dp"
@@ -111,7 +114,7 @@
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <TextView
-                    android:id="@+id/Total"
+                    android:id="@+id/Total_pedido"
                     android:layout_width="81dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"

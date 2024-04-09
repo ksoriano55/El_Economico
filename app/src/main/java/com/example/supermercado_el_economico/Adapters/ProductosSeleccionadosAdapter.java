@@ -55,16 +55,16 @@ public class ProductosSeleccionadosAdapter extends RecyclerView.Adapter<Producto
             @Override
             public void onClick(View v) {
                 int newQuantity = producto.getCantidad() - producto.getCantidad();
-               // if (newQuantity >= 0) {
-                    producto.setCantidad(newQuantity);
+                // if (newQuantity >= 0) {
+                producto.setCantidad(newQuantity);
                 //    holder.textViewCantidad.setText("Cantidad: " + newQuantity);
-                    if (newQuantity == 0) {
-                        productosSeleccionados.remove(position);
-                        notifyItemRemoved(position);
-                        notifyItemRangeChanged(position, productosSeleccionados.size());
-                    }
-                    SharedPreferencesHelper.saveProductos(context, productosSeleccionados);
-           //     }
+                if (newQuantity == 0) {
+                    productosSeleccionados.remove(position);
+                    notifyItemRemoved(position);
+                    notifyItemRangeChanged(position, productosSeleccionados.size());
+                }
+                SharedPreferencesHelper.saveProductos(context, productosSeleccionados);
+                //     }
             }
         });
 
@@ -73,17 +73,17 @@ public class ProductosSeleccionadosAdapter extends RecyclerView.Adapter<Producto
             public void onClick(View v) {
                 int newQuantity = producto.getCantidad() - 1;
                 if (newQuantity >= 0) {
-                producto.setCantidad(newQuantity);
+                    producto.setCantidad(newQuantity);
                     Double newPrecio = producto.getPrecio() * newQuantity;
                     holder.textViewPrecioProducto.setText(String.valueOf(newPrecio));
                     holder.textViewCantidad.setText(String.valueOf(newQuantity));
-                if (newQuantity == 0) {
-                    productosSeleccionados.remove(position);
-                    notifyItemRemoved(position);
-                    notifyItemRangeChanged(position, productosSeleccionados.size());
+                    if (newQuantity == 0) {
+                        productosSeleccionados.remove(position);
+                        notifyItemRemoved(position);
+                        notifyItemRangeChanged(position, productosSeleccionados.size());
+                    }
+                    SharedPreferencesHelper.saveProductos(context, productosSeleccionados);
                 }
-                SharedPreferencesHelper.saveProductos(context, productosSeleccionados);
-                     }
             }
         });
 

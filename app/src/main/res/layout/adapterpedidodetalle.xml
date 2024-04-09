@@ -75,7 +75,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="0dp"
                             android:layout_marginBottom="10dp"
-                            android:text="Precio"
+                            android:text="Total"
                             android:textStyle="bold"
                             android:textColor="#302E2E"
                             android:textSize="16sp"/>

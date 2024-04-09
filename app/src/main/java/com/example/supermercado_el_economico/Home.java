@@ -97,7 +97,7 @@ public class Home extends AppCompatActivity {
                         finish();
                     }
                     else if(itemId == R.id.page_2){
-                        Intent intent = new Intent(getApplicationContext(), HistorialPedidoActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), PedidosActivity.class);
                         startActivity(intent);
                         finish();
                     }

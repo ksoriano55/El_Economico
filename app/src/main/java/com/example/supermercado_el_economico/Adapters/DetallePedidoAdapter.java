@@ -38,7 +38,9 @@ public class DetallePedidoAdapter extends RecyclerView.Adapter<DetallePedidoAdap
     public void onBindViewHolder(@NonNull ProductoViewHolder holder, int position) {
         Producto producto = productos.get(position);
         holder.textViewNombreProducto.setText(producto.getNombre());
-        holder.textViewPrecioProducto.setText(String.valueOf(producto.getPrecio()));
+        //holder.textViewPrecioProducto.setText(String.valueOf(producto.getPrecio()));
+        Double Precio = producto.getPrecio() * producto.getCantidad();
+        holder.textViewPrecioProducto.setText(String.valueOf(Precio));
         holder.textViewCantidadProducto.setText(String.valueOf(producto.getCantidad()));
         // Si tienes la URL de la imagen en tu modelo de Producto, puedes cargarla usando Glide
         Glide.with(context)
